@@ -1,0 +1,21 @@
+CS4760 Project 6: Memory Management
+
+##### DESCRIPTION
+This program is designed to demonstrate how memory
+is managed in an operating sys. The OS simulator
+will start by initializing IPC resources and determine
+which request schm to use in the user processes. The
+LRU page replacement algorithm will be used when there is
+full memory. For the request schemes (random or weighted),
+the overall goal is to generate the fewest number of overall
+page faults. The most realistic model is the weighted request
+schm because it is more likely to request addresses from
+lower-indexed pages, so the chances the request of a page
+not being in memory is significantly less.
+
+##### BUILD
+make
+
+##### EXECUTION
+./oss -h
+./oss [-m x] [-d]
