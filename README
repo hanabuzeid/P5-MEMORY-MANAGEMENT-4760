@@ -1,0 +1,122 @@
+CS4760 Project 6: Memory Management
+
+##### DESCRIPTION
+This program is designed to demonstrate how memory
+is managed in an operating sys. The OS simulator
+will start by initializing IPC resources and determine
+which request schm to use in the user processes. The
+LRU page replacement algorithm will be used when there is
+full memory. For the request schemes (random or weighted),
+the overall goal is to generate the fewest number of overall
+page faults. The most realistic model is the weighted request
+schm because it is more likely to request addresses from
+lower-indexed pages, so the chances the request of a page
+not being in memory is significantly less.
+
+##### BUILD
+make
+
+##### EXECUTION
+./oss -h
+./oss [-m x] [-d]
+
+##### ISSUES
+- Program may pause mid-execution
+- Doesn't abort properly sometimes
+
+#### ADJUSTMENTS
+- Memory map
+- get_page routine
+- I/O handling
+
+##### CHANGELOG
+
+commit 60e73588bf7f999cb8c10eaad06f79d05092252e
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Wed Dec 2 22:15:23 2020 -0600
+
+    Updated headings
+
+commit 707c36d17065cc020a73c22fa404961d4645bd1c
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Wed Dec 2 21:46:37 2020 -0600
+
+    Added debug mode
+
+commit f580e264e2fc2bf7633885c4c5c80bd843e41cb9
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Wed Dec 2 20:39:37 2020 -0600
+
+    Updated usage
+
+commit 83b354ce0ccd69778acfa03a4cd7f5aa7626143e
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Wed Dec 2 15:36:21 2020 -0600
+
+    Updated README
+
+commit 6cbdd1e5d7d34f863f76da9bc49883c9ae18b52f
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Wed Dec 2 14:45:44 2020 -0600
+
+    Fixed memor map
+
+commit 1962dd135268636c7fbf20ec8fa34a2430e66dc1
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Wed Dec 2 09:46:38 2020 -0600
+
+    Implemented memory map
+
+commit 4615bfb868706613ea16dcd6373e280932d5e2bb
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Wed Dec 2 09:21:57 2020 -0600
+
+    Updated README
+
+commit 7e959069051ad3302a20d4cc4019f1888861f12d
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Tue Nov 24 23:30:53 2020 -0600
+
+    Fixed more bugs
+
+commit ab69ec97c328b7afa43bfecfa61bcf073e817396
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Tue Nov 24 18:10:57 2020 -0600
+
+    Implemented weighted requests
+
+commit fa54704a918c43a94abdfd4eb6d725c3b49a1c24
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Mon Nov 20 16:23:12 2020 -0600
+
+    Fixed page-table/request bugs
+
+commit 52d0f295b96823ea0ad0edd732eef77b0bb26151
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Sun Nov 19 18:55:33 2020 -0600
+
+    Implemented page-table
+
+commit bb56549626d1b0fb2573f9638731d6ce60ea5c26
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Sat Nov 19 15:21:17 2020 -0600
+
+    Implemented process requesting reading/writing
+
+commit fa54704a918c43a94abdfd4eb6d725c3b49a1c24
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Fri Nov 18 22:59:41 2020 -0600
+
+    Implemented process simulation
+
+commit c22bdf8a15e5ecb4138ade7cae7eb00dc6df11d1
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Thu Nov 18 21:58:33 2020 -0600
+
+    Updated README
+
+commit e9ddc8b71affc00f2e77ae500709af30cf125f49
+Author: Jared Diehl <diehl@hoare7.cs.umsl.edu>
+Date:   Wed Nov 18 20:18:25 2020 -0600
+
+    Initial setup
